@@ -1,0 +1,414 @@
+* {
+  box-sizing: border-box;
+}
+
+#formButton {
+  background-color: #04aa6d; /* Green */
+  width: 100%;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 1s;
+}
+
+#formButton p { 
+   
+    margin: 1px;
+}
+
+
+#formButton:hover {
+  background-color: white;
+  color: #04aa6d;
+}
+
+#miniFont {
+  font-size: 10px;
+  margin: 10px;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 60vh;
+  background-image: url("images/anthony-roberts--OI61ziuAh0-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.containerPanel {
+  display: flex;
+  flex-direction: column;
+
+  width: 40%;
+  height: 100%;
+  margin-left: 8rem;
+}
+
+.headerPanel {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  align-items: center;
+}
+
+.titlePanel {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  height: 40%;
+  margin-top: 10%;
+  font-size: 3rem;
+}
+
+.paragraphPanel {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  height: 30%;
+  margin-top: 10%;
+  text-align: left;
+}
+
+.contactUsButton {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  margin-right: 10rem;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100vh;
+}
+
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutUsTitle {
+  height: 20%;
+  margin-top: 5rem;
+}
+
+.aboutUsBody {
+  margin: 1rem 0 0;
+  height: 30%;
+}
+
+.services {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 40vh;
+}
+
+.servicesHeader {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  align-items: center;
+}
+
+.serviceMainPanel {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+  height: 40%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.servicePanel {
+  margin: 2rem;
+  display: flex;
+  width: 30%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: burlywood;
+  border-radius: 10px;
+}
+
+.plastisol {
+  background-image: url("images/plastisoles-1030x393.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.baseagua {
+  background-image: url("images/BLOG_1_IMAGENES_Mesa-de-trabajo-1-copia-17.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.corrosión {
+  background-image: url("images/discharge.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 50%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contactHeader {
+  display: flex;
+  width: 100%;
+
+  align-items: center;
+}
+
+.contactContent {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.profileContactHeader {
+  width: 50%;
+  height: 100%;
+}
+
+.textContactAgent {
+  width: 80%;
+}
+
+.agentPicture {
+  margin-top: 5rem;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 3px solid #04aa6d;
+}
+
+.theForm {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opinions {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 40vh;
+}
+
+.opinionsHeader {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  align-items: center;
+}
+
+.opinionsMainPanel {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.opinionsPanel {
+  margin: 2rem;
+  display: flex;
+  width: 30%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #04aa6d;
+  border-radius: 10px;
+}
+
+.opinionsPanel p {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.opinionsPanel h4 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+
+.writeOpinion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 30vw;
+  height: 80vh;
+  position: absolute;
+  border-radius: 5%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: var(--gradient);
+  background-size: 600%;  
+  animation: background-animation 5s infinite alternate;
+}
+
+
+
+@keyframes background-animation {
+  0% {
+    background-position: left;
+  } 
+  100% {
+    background-position: right;
+  }
+}
+
+
+
+
+
+.writeOpinionHeader {
+  width: 80%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.opinionForm {
+  background-color: #04aa6d; /* Green */
+  width: 50%;
+  height: 5%;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 1s;
+}
+
+
+
+.opinionForm:hover {
+  background-color: white;
+  color: #04aa6d;
+}
+
+input {
+  height: 50px;
+  width: 20vw;
+  font-size: 20px;
+}
+
+textarea {
+  font-family: Roboto;
+  font-size: 20px;
+}
+
+hr {
+  width: 70%;
+  height: 10px;
+  background-color: #04aa6d;
+  border-radius: 8px;
+}
+
+h2 {
+  font-family: Merriweather, Courier, monospace;
+  font-size: 5rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+h4 {
+  font-family: Roboto, "Courier New", Courier, monospace;
+  font-size: 2rem;
+}
+
+.theForm h5 {
+  font-family: Roboto, "Courier New", Courier, monospace;
+  font-size: 18px;
+  margin: 10px;
+  font-weight: 400;
+}
+
+p {
+  font-family: Montserrat, Courier, monospace;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.servicePanel p {
+  font-size: 1rem;
+}
+
+.writeOpinionHeader h4 {
+  margin: 0;
+}
+
+.writeOpinionHeader p {
+  margin-top: 20px;
+  font-weight: 400;
+}
+
+
+:root {
+  --gradient: linear-gradient(
+    45deg,
+    rgb(16, 210, 240),
+    #04aa6d,
+    #7db5a1,
+    rgb(12, 246, 125)
+    
+  );
+}

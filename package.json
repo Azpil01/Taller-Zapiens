@@ -1,0 +1,16 @@
+{
+  "name": "taller-zapiens",
+  "version": "1.0.0",
+  "description": "Landing page of my Screenprint shop",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Azpil",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.2.1"
+  }
+}
