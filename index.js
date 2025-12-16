@@ -4,7 +4,7 @@ import ejs from "ejs";
 const port = 3000;
 const app = new express();
 
-app.use(express.static("public"));
+app.use(express.static("/public"));
 
 app.get("/", (req, res) => {
     res.render("index.ejs");
