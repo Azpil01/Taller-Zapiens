@@ -58,7 +58,6 @@ body {
 .containerPanel {
   display: flex;
   flex-direction: column;
-
   width: 40%;
   height: 100%;
   margin-left: 8rem;
@@ -121,19 +120,97 @@ body {
   height: 30%;
 }
 
-.services {
+.section {
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 40vh;
+ 
 }
 
-.servicesHeader {
+.sectionHeader {
   display: flex;
   width: 100%;
-  height: 15%;
+  height: 40%;
+  flex-direction: column;
+  justify-content: left;
+  
+}
+
+.sectionTitle {
+ 
+  display: flex;
+  flex-direction: row;
+  width: 100%;  
   align-items: center;
+}
+
+.sectionParagraph {
+  margin: 1rem 0 0;
+  height: 30%;
+ 
+}
+
+.sectionBody {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 80%;
+ 
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 80%; 
+  border-radius: 10px; 
+}
+
+
+.coloresPlanos {
+  background-image: url("images/media_1f62675f25fb6a72d9b2d8105753e3a8adaf90692.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.mediosTonos {
+  background-image: url("images/12_halftone-mouth-result.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.cuatricromia {
+  background-image: url("images/cuatri.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.itemTitle {
+  text-align: center;
+}
+
+.itemParagraph {
+  text-align: center;
 }
 
 .serviceMainPanel {
@@ -192,152 +269,7 @@ body {
   width: 100%;
 
   align-items: center;
-}
 
-.contactContent {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-}
-
-.profileContactHeader {
-  width: 50%;
-  height: 100%;
-}
-
-.textContactAgent {
-  width: 80%;
-}
-
-.agentPicture {
-  margin-top: 5rem;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  border: 3px solid #04aa6d;
-}
-
-.theForm {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.opinions {
-  margin-top: 5rem;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 40vh;
-}
-
-.opinionsHeader {
-  display: flex;
-  width: 100%;
-  height: 15%;
-  align-items: center;
-}
-
-.opinionsMainPanel {
-  margin-top: 2rem;
-  display: flex;
-  width: 100%;
-  height: 50%;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.opinionsPanel {
-  margin: 2rem;
-  display: flex;
-  width: 30%;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #04aa6d;
-  border-radius: 10px;
-}
-
-.opinionsPanel p {
-  margin-top: 12px;
-  text-align: center;
-  font-size: 1.3rem;
-}
-
-.opinionsPanel h4 {
-  margin: 0;
-  text-align: center;
-  font-size: 1.3rem;
-}
-
-
-.writeOpinion {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 30vw;
-  height: 80vh;
-  position: absolute;
-  border-radius: 5%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: var(--gradient);
-  background-size: 600%;  
-  animation: background-animation 5s infinite alternate;
-}
-
-
-
-@keyframes background-animation {
-  0% {
-    background-position: left;
-  } 
-  100% {
-    background-position: right;
-  }
-}
-
-
-
-
-
-.writeOpinionHeader {
-  width: 80%;
-  height: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-}
-
-.opinionForm {
-  background-color: #04aa6d; /* Green */
-  width: 50%;
-  height: 5%;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  border-radius: 8px;
-  transition-duration: 1s;
-}
-
-
-
-.opinionForm:hover {
-  background-color: white;
-  color: #04aa6d;
 }
 
 input {
@@ -371,7 +303,7 @@ h3 {
 
 h4 {
   font-family: Roboto, "Courier New", Courier, monospace;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .theForm h5 {
