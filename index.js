@@ -1,10 +1,19 @@
 import express from "express";
 import ejs from "ejs";
+import ms from "ms";
+
 
 const port = 3000;
 const app = new express();
 
-app.use(express.static("public"));
+const version = Date.now();
+
+app.locals.version = version;
+
+app.use(express.static("public", {
+    maxAge: "1d",
+    etag: true
+}));
 
 app.get("/", (req, res) => {
     res.render("index.ejs");
