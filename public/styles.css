@@ -26,7 +26,7 @@
 
 
 #formButton:hover {
-  background-color: rgb(63, 24, 155); /*Antes era blanco*/
+  background-color: white;
   color: #04aa6d;
 }
 
