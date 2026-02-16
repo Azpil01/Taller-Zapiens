@@ -11,7 +11,7 @@ const version = Date.now();
 app.locals.version = version;
 
 app.use(express.static("public", {
-    maxAge: "1d",
+    maxAge: ms("1d"),
     etag: true
 }));
 
