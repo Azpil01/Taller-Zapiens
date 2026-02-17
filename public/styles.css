@@ -19,11 +19,9 @@
   transition-duration: 1s;
 }
 
-#formButton p { 
-   
-    margin: 1px;
+#formButton p {
+  margin: 1px;
 }
-
 
 #formButton:hover {
   background-color: white;
@@ -53,22 +51,47 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  justify-content: center;
 }
 
 .containerPanel {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 50%;
   height: 100%;
-  margin-left: 8rem;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5%;
+}
+
+.background {
+  background-color: rgba(255, 255, 255, 0.699);
+  width: 45%;
+  height: 80%;
+  border-radius: 15px;
+}
+
+.backgroundSmall {
+  background-color: rgba(241, 241, 241, 0.658);
+  width: 80%;
+  height: 80%;
+  border-radius: 15px;
+}
+
+.backgroundSmallDark {
+  background-color: rgba(0, 0, 0, 0.781);
+  width: 80%;
+  height: 80%;
+  border-radius: 15px;
 }
 
 .headerPanel {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 85%;
   height: 100%;
   align-items: center;
+  justify-content: center;
 }
 
 .titlePanel {
@@ -94,9 +117,7 @@ body {
 .contactUsButton {
   margin-top: 2rem;
   margin-bottom: 5rem;
-  margin-right: 10rem;
 }
-
 
 .content {
   display: flex;
@@ -126,7 +147,6 @@ body {
   flex-direction: column;
   width: 100%;
   height: 40vh;
- 
 }
 
 .sectionHeader {
@@ -135,25 +155,21 @@ body {
   height: 40%;
   flex-direction: column;
   justify-content: left;
-  
 }
 
 .sectionTitle {
- 
   display: flex;
   flex-direction: row;
-  width: 100%;  
+  width: 100%;
   align-items: center;
 }
 
 .sectionParagraph {
   margin: 1rem 0 0;
   height: 30%;
- 
 }
 
 .sectionBody {
-  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -169,17 +185,17 @@ body {
   align-items: center;
   width: 90%;
   height: 80%;
- 
 }
 
 .item {
   display: flex;
   flex-direction: column;
   width: 30%;
-  height: 80%; 
-  border-radius: 10px; 
+  height: 100%;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .coloresPlanos {
   background-image: url("images/media_1f62675f25fb6a72d9b2d8105753e3a8adaf90692.png");
@@ -188,15 +204,12 @@ body {
   background-repeat: no-repeat;
 }
 
-
 .mediosTonos {
   background-image: url("images/12_halftone-mouth-result.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
-
 
 .cuatricromia {
   background-image: url("images/cuatri.jpg");
@@ -269,7 +282,10 @@ body {
   width: 100%;
 
   align-items: center;
+}
 
+.black {
+  color: beige;
 }
 
 input {
@@ -333,7 +349,6 @@ p {
   font-weight: 400;
 }
 
-
 :root {
   --gradient: linear-gradient(
     45deg,
@@ -341,6 +356,5 @@ p {
     #04aa6d,
     #7db5a1,
     rgb(12, 246, 125)
-    
   );
 }
