@@ -23,6 +23,10 @@ app.get("/us", (req, res) => {
     console.log("It is the us sections");
 })
 
+app.get("/contact", (req, res) => {
+    console.log("The contact info")
+})
+
 app.listen(port, () => {
     console.log(`All good from port ${port} ` );
 })
