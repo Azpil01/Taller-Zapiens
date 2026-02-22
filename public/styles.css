@@ -408,16 +408,30 @@ body {
 
 .iconContainer {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   width: 90%;
+  height: 80%;
+  margin-bottom: 10%;
+  margin-top: 5%;
 }
 
 .iconElement {
   display: flex;
   flex-direction: column;
-  width: 25%;
-  height: auto;
+  width: 20%;
+  height: 10%;
   align-items: center;
   justify-content: center;
+}
+
+.iconTitle{
+
+}
+
+.iconParagraph {
+  height: 100%;
 }
 
 .comunicacion {
