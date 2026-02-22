@@ -350,6 +350,7 @@ body {
   text-transform: capitalize;
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
+  font-family: Roboto, "Courier New", Courier, monospace;;
 }
 
 .testimonial-item p {
@@ -480,6 +481,8 @@ h2 {
 h3 {
   font-size: 2.5rem;
   margin: 0;
+  font-family: Roboto, "Courier New", Courier, monospace;
+
 }
 
 h4 {
