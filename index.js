@@ -58,7 +58,7 @@ app.post("/sendMessage", (req, res) => {
 const mailOptions = {
     from: correo,
     to: userGmail,
-    subject: `Mail from ${nombre}`,
+    subject: `Mail from ${nombre}. ${correo}`,
     text: subject
 }
 
@@ -71,6 +71,7 @@ const mailOptions = {
     })
 
     res.redirect("/");
+    console.log(mailOptions);
 })
 
 
