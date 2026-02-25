@@ -2,12 +2,16 @@ import express from "express";
 import ms from "ms";
 import nodemailer from "nodemailer";
 import bodyParser from "body-parser";
-import  'dotenv/config';
-
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 const userGmail= process.env.USER_GMAIL;
 const appPasword = process.env.APP_PASWORD;
+
+console.log("--- CHEQUEO DE VARIABLES ---");
+console.log("USER_GMAIL cargado:", !!userGmail);
+console.log("APP_PASWORD cargado:", !!appPasword);
 
 
 
