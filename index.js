@@ -9,10 +9,9 @@ dotenv.config();
 const userGmail = process.env.USER_GMAIL || "VARIABLE_NO_CONFIGURADA";
 const appPasword = process.env.APP_PASWORD || "SIN_CONTRASEÑA";
 
-console.log("Revisando configuración...");
-console.log("Email:", userGmail);
-
-
+if (!userGmail || !appPasword) {
+    throw new Error("CRÍTICO: Las variables de entorno no están llegando al código. Revisa el hPanel.");
+}
 
 const port = 3000;
 const app = new express();
