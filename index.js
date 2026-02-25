@@ -6,13 +6,11 @@ import  'dotenv/config';
 
 
 
-const userGmail= "eazpil01@gmail.com";
-const appPasword = "kmkp ffaq albo acee";
+const userGmail = process.env.USER_GMAIL;
+const appPasword = process.env.APP_PASWORD;
 
-
-// const userGmail= process.env.USER_GMAIL;
-// const appPasword = process.env.APP_PASWORD;
-
+console.log("--- Diagnóstico de Zapiens ---");
+console.log("Email configurado:", userGmail ? "SÍ" : "NO (Revisar hPanel)");
 
 
 
