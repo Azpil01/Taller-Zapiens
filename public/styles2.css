@@ -727,3 +727,105 @@ p {
     rgb(12, 246, 125)
   );
 }
+
+
+
+/* --- AJUSTES RESPONSIVOS --- */
+
+/* 1. Tablets y Pantallas Medianas (Menos de 1024px) */
+@media (max-width: 1024px) {
+  .containerPanel {
+    width: 80%; /* Ampliamos el panel para que no se vea apretado */
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .titlePanel {
+    font-size: 2.5rem;
+  }
+
+  .contacto-form {
+    width: 50%; /* El formulario crece un poco */
+    right: 5%;
+  }
+}
+
+/* 2. Móviles (Menos de 768px) - EL CAMBIO MÁS GRANDE */
+@media (max-width: 768px) {
+  
+  /* Ajustes de Tipografía */
+  h2 { font-size: 3rem; }
+  h3 { font-size: 1.8rem; }
+  p, .contacto-p { font-size: 1.1rem; }
+
+  /* Header y Paneles */
+  .header {
+    min-height: 50vh;
+    align-items: center;
+  }
+
+  .containerPanel {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  /* Secciones de Servicios (Pasar de 3 columnas a 1 sola) */
+  .itemContainer, .serviceMainPanel, .iconContainer {
+    flex-direction: column; /* Apilamos los elementos verticalmente */
+    height: auto;
+  }
+
+  .item, .servicePanel, .iconElement {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  /* Sección Diferencia */
+  .h3Diferencia, .sectionParagraphDiferencia {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* --- SECCIÓN CONTACTO (Crítico) --- */
+  .contactFormSection {
+    height: auto; /* Dejamos que el contenido dicte el largo */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacto-top-section {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .contacto-form {
+    position: relative; /* Deja de flotar para ponerse debajo del texto */
+    width: 90%;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin: 20px auto;
+  }
+
+  .contacto-bottom-section {
+    padding-top: 50px;
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  .contacto-bottom-body {
+    flex-direction: column;
+  }
+
+  .contacto-bottom-column {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  /* Ajuste de inputs para que no se salgan de la pantalla */
+  input {
+    width: 100% !important;
+  }
+}

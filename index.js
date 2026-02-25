@@ -6,8 +6,8 @@ import  'dotenv/config';
 
 
 
-const userGmail= process.env.userGmail;
-const appPasword = process.env.appPasword;
+const userGmail= process.env.USER_GMAIL;
+const appPasword = process.env.APP_PASWORD;
 
 
 
