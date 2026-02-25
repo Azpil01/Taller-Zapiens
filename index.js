@@ -72,9 +72,7 @@ const mailOptions = {
 
 
 
-app.get("/contact", (req, res) => {
-    console.log("The contact info")
-})
+
 
 app.listen(port, () => {
     console.log(`All good from port ${port}, Azpil ` );
