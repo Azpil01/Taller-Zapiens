@@ -21,6 +21,9 @@ app.locals.version = version;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.set("view engine", "ejs");
+
+
 
 app.use(express.static("public", {
     maxAge: ms("1d"),
