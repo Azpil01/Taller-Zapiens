@@ -2,16 +2,19 @@ import express from "express";
 import ms from "ms";
 import nodemailer from "nodemailer";
 import bodyParser from "body-parser";
-import dotenv from 'dotenv';
-dotenv.config();
+import  'dotenv/config';
 
 
-const userGmail = process.env.USER_GMAIL || "VARIABLE_NO_CONFIGURADA";
-const appPasword = process.env.APP_PASWORD || "SIN_CONTRASEÑA";
 
-if (!userGmail || !appPasword) {
-    throw new Error("CRÍTICO: Las variables de entorno no están llegando al código. Revisa el hPanel.");
-}
+const userGmail= "eazpil01@gmail.com";
+const appPasword = "kmkp ffaq albo acee";
+
+
+// const userGmail= process.env.USER_GMAIL;
+// const appPasword = process.env.APP_PASWORD;
+
+
+
 
 const port = 3000;
 const app = new express();
@@ -45,8 +48,6 @@ app.get("/", (req, res) => {
 
 app.post("/sendMessage", (req, res) => {
     
-    console.log("He recibido una petición POST");
-
     const nombre = req.body.nombre;
     const subject = req.body.mensaje;
     const correo = req.body.correo;
@@ -68,12 +69,14 @@ const mailOptions = {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-           return res.status(500).send("Error de Nodemailer: " + error.message);
+            console.log(error);
         } else {
             console.log("Email sent: " + info.response);
-            res.redirect("/");
         }
     })
+
+    res.redirect("/");
+    console.log(mailOptions);
 })
 
 
