@@ -46,7 +46,7 @@ app.get("/", (req, res) => {
 app.post("/sendMessage", (req, res) => {
     
     console.log("He recibido una petición POST");
-    
+
     const nombre = req.body.nombre;
     const subject = req.body.mensaje;
     const correo = req.body.correo;
@@ -68,14 +68,12 @@ const mailOptions = {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.log(error);
+           return res.status(500).send("Error de Nodemailer: " + error.message);
         } else {
             console.log("Email sent: " + info.response);
+            res.redirect("/");
         }
     })
-
-    res.redirect("/");
-    console.log(mailOptions);
 })
 
 
