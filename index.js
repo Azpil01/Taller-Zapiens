@@ -6,12 +6,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 
-const userGmail= process.env.USER_GMAIL;
-const appPasword = process.env.APP_PASWORD;
+const userGmail = process.env.USER_GMAIL || "VARIABLE_NO_CONFIGURADA";
+const appPasword = process.env.APP_PASWORD || "SIN_CONTRASEÑA";
 
-console.log("--- CHEQUEO DE VARIABLES ---");
-console.log("USER_GMAIL cargado:", !!userGmail);
-console.log("APP_PASWORD cargado:", !!appPasword);
+console.log("Revisando configuración...");
+console.log("Email:", userGmail);
 
 
 
