@@ -7,7 +7,7 @@ import  'dotenv/config';
 
 
 const userGmail = process.env.USER_GMAIL;
-const appPasword = process.env.APP_PASWORD;
+const appPassword = process.env.APP_PASSWORD;
 
 console.log("--- Diagnóstico de Zapiens ---");
 console.log("Email configurado:", userGmail ? "SÍ" : "NO (Revisar hPanel)");
@@ -54,7 +54,7 @@ app.post("/sendMessage", (req, res) => {
     service: "gmail",
     auth: {
         user: userGmail,
-        pass: appPasword,
+        pass: appPassword,
     } 
 });
 
