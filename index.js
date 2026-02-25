@@ -45,6 +45,8 @@ app.get("/", (req, res) => {
 
 app.post("/sendMessage", (req, res) => {
     
+    console.log("He recibido una petición POST");
+    
     const nombre = req.body.nombre;
     const subject = req.body.mensaje;
     const correo = req.body.correo;
