@@ -9,13 +9,12 @@ import  'dotenv/config';
 const userGmail = process.env.USER_GMAIL;
 const appPassword = process.env.APP_PASSWORD;
 
-console.log("--- Diagnóstico de Zapiens ---");
-console.log("Email configurado:", userGmail ? "SÍ" : "NO (Revisar hPanel)");
+
 
 
 
 const port = 3000;
-const app = new express();
+const app = express();
 
 const version = Date.now();
 
