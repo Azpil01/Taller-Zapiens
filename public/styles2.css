@@ -426,7 +426,6 @@ body {
   align-items: center;
   justify-content: center;
   justify-items: center;
-
 }
 
 .h3Diferencia {
@@ -460,12 +459,10 @@ body {
   height: 17rem;
   align-items: center;
   justify-content: center;
- 
 }
 
 .iconParagraph {
   height: 100%;
-
 }
 
 .comunicacion {
@@ -493,8 +490,9 @@ body {
   height: 80vh;
   align-items: flex-start;
   justify-content: center;
-}
 
+  position: relative;
+}
 
 .contacto-top-section {
   display: flex;
@@ -506,7 +504,6 @@ body {
 }
 
 .contacto-top-header {
-
   margin-bottom: 2%;
 }
 
@@ -524,7 +521,6 @@ body {
   width: 100%;
   height: auto;
   align-items: flex-start;
-
 }
 
 .contacto-top-element {
@@ -536,8 +532,7 @@ body {
   margin-top: 2.5%;
 }
 
-
-.contacto-img{
+.contacto-img {
   width: 1.5rem;
   height: auto;
   margin-right: 5%;
@@ -547,9 +542,6 @@ body {
   width: 100%;
   height: auto;
 }
-
-
-
 
 .contacto-bottom-section {
   background-color: #04aa6d;
@@ -566,11 +558,9 @@ body {
   align-items: center;
 }
 
-
 .contactFormSection p {
   font-size: 1.5rem;
 }
-
 
 .contacto-bottom-column {
   display: flex;
@@ -582,7 +572,6 @@ body {
 .contacto-bottom-title {
   margin-bottom: 10px;
 }
-
 
 .contacto-bottom-bullets {
   width: 100%;
@@ -598,25 +587,56 @@ body {
   text-align: center;
 }
 
-
 /* contacto-form */
 
 .contacto-form {
-  width: 50%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  border: 5px red solid;
+  width: 35%; /* Ancho fijo similar al de la imagen */
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra para efecto flotante */
+
+  /* Posicionamiento */
+  position: absolute;
+  right: 10%; /* Lo alejamos de la derecha */
+  top: 34.5%; /* Lo centramos verticalmente respecto al contenedor */
+  transform: translateY(-50%); /* Ajuste fino de centrado vertical */
+  z-index: 100;
+
+  border: none; /* Quitamos el borde rojo de prueba */
 }
 
-.input-nombre {
-  border: 5px #04aa6d solid;
+.btn-enviar {
+    background-color: #04aa6d; /* Tu color verde actual */
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+    border-radius: 10px;
 }
 
+.btn-enviar:hover {
+      background-color: white;
+  color: #04aa6d;
+  border: 3px #04aa6d solid;
+}
 
+.contacto-form input, 
+.contacto-form textarea {
+    width: 100%; /* Que ocupen todo el ancho del cuadro blanco */
+    margin-bottom: 15px;
+    border: 1px solid #04aa6d;
+    padding: 10px;
+    font-size: 1rem;
+}
 
+.contactFormSection h4{
+    margin-bottom: 2rem;
+}
 
 /* elementos */
 
