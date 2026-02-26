@@ -4,9 +4,6 @@ import nodemailer from "nodemailer";
 import bodyParser from "body-parser";
 import "dotenv/config";
 
-const userGmail = process.env.USER_GMAIL;
-const appPassword = process.env.APP_PASSWORD;
-
 const port = 3000;
 const app = express();
 
@@ -38,16 +35,21 @@ app.post("/sendMessage", async (req, res) => {
   const { nombre, mensaje, correo } = req.body;
 
   try {
+    if (!process.env.USER_GMAIL || !process.env.APP_PASSWORD) {
+      throw new Error("Missing USER_GMAIL/APP_PASSWORD");
+    }
     await sendEmailModule(nombre, mensaje, correo);
     res.render("index.ejs", { alerta: "success", usuario: nombre });
   } catch (error) {
+    if (!process.env.USER_GMAIL || !process.env.APP_PASSWORD)
+      throw new Error("Missing USER_GMAIL/APP_PASSWORD");
     console.error("Error al enviar email");
     console.error("sendMessage error:", error?.message);
     console.error("stack:", error?.stack);
     console.error("raw:", error);
     res
       .status(500)
-      .json({ ok: false, error: err?.message || "sendMessage failed" });
+      .json({ ok: false, error: error?.message || "sendMessage failed" });
     res.render("index.ejs", { alerta: "error" });
   }
 });
@@ -65,14 +67,14 @@ function sendEmailModule(nombre, mensaje, correo) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: userGmail,
-      pass: appPassword,
+      user: process.env.USER_GMAIL,
+      pass: process.env.APP_PASSWORD,
     },
   });
 
   const mailOptions = {
     from: correo,
-    to: userGmail,
+    to: process.env.USER_GMAIL,
     subject: `Mail from ${nombre}. ${correo}`,
     text: mensaje,
   };
