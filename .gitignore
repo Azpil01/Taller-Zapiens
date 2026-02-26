@@ -5,6 +5,7 @@ jspm_packages/
 # Variables de entorno (SECRETOS: contraseñas de Postgres, APIs de Azure)
 .env
 .env.local
+config.local.js
 
 # Logs (Archivos que se generan al correr el servidor)
 npm-debug.log*

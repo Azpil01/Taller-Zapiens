@@ -7,6 +7,11 @@ import "dotenv/config";
 const port = 3000;
 const app = express();
 
+let local = {};
+try { local = await import("./config.local.js"); } catch {}
+process.env.USER_GMAIL ||= local.USER_GMAIL;
+process.env.APP_PASSWORD ||= local.APP_PASSWORD;
+
 console.error('ENV keys sample', Object.keys(process.env).filter(k => k.includes('GMAIL') || k.includes('APP')));
 const version = Date.now();
 
