@@ -27,18 +27,11 @@ app.set("view engine", "ejs");
 
 
 
-// app.use(express.static("public", {
-//     maxAge: ms("1d"),
-//     etag: true
-// }));
-
-
-const path = require("path");
-
-app.use(express.static(path.join(__dirname, "public"), {
- maxAge: ms("1d"),
- etag: true
+app.use(express.static("public", {
+    maxAge: ms("1d"),
+    etag: true
 }));
+
 
 
 
