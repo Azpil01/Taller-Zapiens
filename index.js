@@ -42,13 +42,15 @@ app.post("/sendMessage", async (req, res) => {
     res.render("index.ejs", { alerta: "success", usuario: nombre });
   } catch (error) {
     console.error("Error al enviar email");
+    console.error("sendMessage error:", err?.message);
+    console.error("stack:", err?.stack);
+    console.error("raw:", err);
+    res
+      .status(500)
+      .json({ ok: false, error: err?.message || "sendMessage failed" });
     res.render("index.ejs", { alerta: "error" });
   }
 });
-
-
-
-
 
 app.get("/prueba", (req, res) => {
   res.render("test.ejs", { enviado: true });
@@ -58,7 +60,6 @@ app.get("/prueba", (req, res) => {
 app.listen(port, () => {
   console.log(`All good from port ${port}, Azpil `);
 });
-
 
 function sendEmailModule(nombre, mensaje, correo) {
   const transporter = nodemailer.createTransport({
