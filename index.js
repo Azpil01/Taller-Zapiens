@@ -42,9 +42,9 @@ app.post("/sendMessage", async (req, res) => {
     res.render("index.ejs", { alerta: "success", usuario: nombre });
   } catch (error) {
     console.error("Error al enviar email");
-    console.error("sendMessage error:", err?.message);
-    console.error("stack:", err?.stack);
-    console.error("raw:", err);
+    console.error("sendMessage error:", error?.message);
+    console.error("stack:", error?.stack);
+    console.error("raw:", error);
     res
       .status(500)
       .json({ ok: false, error: err?.message || "sendMessage failed" });
