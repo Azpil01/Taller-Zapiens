@@ -7,6 +7,11 @@ import "dotenv/config";
 const port = 3000;
 const app = express();
 
+console.error('ENV check', {
+ hasUser: Boolean(process.env.USER_GMAIL),
+ hasPass: Boolean(process.env.APP_PASSWORD),
+});
+
 const version = Date.now();
 
 app.locals.version = version;
@@ -26,32 +31,19 @@ app.get("/", (req, res) => {
 });
 
 app.post("/sendMessage", async (req, res) => {
-  //   const nombre = req.body.nombre;
-  //   const subject = req.body.mensaje;
-  //   const correo = req.body.correo;
+ const { nombre, mensaje, correo } = req.body;
 
-  //!Destructuración.
+ try {
+ if (!process.env.USER_GMAIL || !process.env.APP_PASSWORD) {
+ throw new Error("Missing USER_GMAIL/APP_PASSWORD");
+ }
 
-  const { nombre, mensaje, correo } = req.body;
-
-  try {
-    if (!process.env.USER_GMAIL || !process.env.APP_PASSWORD) {
-      throw new Error("Missing USER_GMAIL/APP_PASSWORD");
-    }
-    await sendEmailModule(nombre, mensaje, correo);
-    res.render("index.ejs", { alerta: "success", usuario: nombre });
-  } catch (error) {
-    if (!process.env.USER_GMAIL || !process.env.APP_PASSWORD)
-      throw new Error("Missing USER_GMAIL/APP_PASSWORD");
-    console.error("Error al enviar email");
-    console.error("sendMessage error:", error?.message);
-    console.error("stack:", error?.stack);
-    console.error("raw:", error);
-    res
-      .status(500)
-      .json({ ok: false, error: error?.message || "sendMessage failed" });
-    res.render("index.ejs", { alerta: "error" });
-  }
+ await sendEmailModule(nombre, mensaje, correo);
+ return res.render("index.ejs", { alerta: "success", usuario: nombre });
+ } catch (error) {
+ console.error("sendMessage error:", error?.message, error);
+ return res.status(500).render("index.ejs", { alerta: "error" });
+ }
 });
 
 app.get("/prueba", (req, res) => {
