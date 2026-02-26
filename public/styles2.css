@@ -729,6 +729,36 @@ p {
 }
 
 
+/* --- Personalización de SweetAlert2 para Zapiens --- */
+
+/* 1. Fuente del Título (Bitcount) */
+.swal2-title {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 500;
+    font-size: 1.8rem !important;
+}
+
+/* 2. Fuente del Contenido y Texto (Montserrat) */
+.swal2-html-container {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1.1rem !important;
+    color: #333 !important;
+}
+
+/* 3. Fuente del Botón de Confirmación */
+.swal2-confirm {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 4. Opcional: Bordes más suaves para que combine con tus inputs */
+.swal2-popup {
+    border-radius: 15px !important;
+    padding: 2rem !important;
+}
+
 
 /* --- AJUSTES RESPONSIVOS --- */
 

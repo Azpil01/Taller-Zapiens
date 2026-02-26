@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
   res.render("index.ejs", { alerta: null });
 });
 
-app.post("/sendMessage", (req, res) => {
+app.post("/sendMessage", async (req, res) => {
   //   const nombre = req.body.nombre;
   //   const subject = req.body.mensaje;
   //   const correo = req.body.correo;
@@ -37,6 +37,30 @@ app.post("/sendMessage", (req, res) => {
 
   const { nombre, mensaje, correo } = req.body;
 
+  try {
+    await sendEmailModule(nombre, mensaje, correo);
+    res.render("index.ejs", { alerta: "success", usuario: nombre });
+  } catch (error) {
+    console.error("Error al enviar email");
+    res.render("index.ejs", { alerta: "error" });
+  }
+});
+
+
+
+
+
+app.get("/prueba", (req, res) => {
+  res.render("test.ejs", { enviado: true });
+  console.log("Se cargó la vista de prueba");
+});
+
+app.listen(port, () => {
+  console.log(`All good from port ${port}, Azpil `);
+});
+
+
+function sendEmailModule(nombre, mensaje, correo) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -52,24 +76,5 @@ app.post("/sendMessage", (req, res) => {
     text: mensaje,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log(error);
-      return res.render("index.ejs", { alerta: "error" });
-    } else {
-      console.log("Email sent: " + info.response);
-      return res.render("index.ejs", { alerta: "success" });
-    }
-  });
-
-  console.log(mailOptions);
-});
-
-app.get("/prueba", (req, res) => {
-  res.render("test.ejs", { enviado: true });
-  console.log("Se cargó la vista de prueba");
-});
-
-app.listen(port, () => {
-  console.log(`All good from port ${port}, Azpil `);
-});
+  return transporter.sendMail(mailOptions);
+}

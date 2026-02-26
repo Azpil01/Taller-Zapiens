@@ -440,11 +440,12 @@
     <script>
    
     const status = "<%= typeof alerta !== 'undefined' ? alerta : '' %>";
+    const nombreAlerta = "<%= typeof usuario !== 'undefined' ? usuario : '' %>";
 
     if (status === 'success') {
         Swal.fire({
             title: '¡Súper!',
-            text: 'Te responderemos a la brevedad',
+            text: `Te responderemos a la brevedad, ${nombreAlerta} `,
             icon: 'success',
             color: "#000000",
             confirmButtonColor: '#04aa6d',
