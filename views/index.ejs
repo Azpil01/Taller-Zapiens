@@ -359,8 +359,8 @@
             <form method="post" action="/sendMessage">
                 <input class="input-nombre" type="text" name="nombre" placeholder="tu nombre..." required>
                 <textarea name="mensaje" placeholder="mensaje..." required rows="5"></textarea>
-                <input type="text" name="correo" placeholder="tu correo..." required>
-                <button class="full-width btn-enviar" type="submit">
+                <input type="email" name="correo" placeholder="tu correo..." required>
+                <button id="sentBtn" class="full-width btn-enviar" type="submit">
                    Enviar mensaje
                 </button>
 
@@ -436,6 +436,28 @@
 
         })
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+   
+    const status = "<%= typeof alerta !== 'undefined' ? alerta : '' %>";
+
+    if (status === 'success') {
+        Swal.fire({
+            title: '¡Súper!',
+            text: 'Te responderemos a la brevedad',
+            icon: 'success',
+            color: "#000000",
+            confirmButtonColor: '#04aa6d',
+            iconColor: "#04aa6d"
+        });
+    } else if (status === 'error') {
+        Swal.fire({
+            title: '¡Ups!',
+            text: 'Hubo un error al enviar el correo. Inténtalo de nuevo.',
+            icon: 'error'
+        });
+    }
+</script>
 </body>
 
-</html>
+</html>4

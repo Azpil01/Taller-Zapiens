@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="testButton"> Test</button>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        // Capturamos la variable enviada desde Express usando sintaxis EJS
+        const status = "<%= typeof alerta !== 'undefined' ? alerta : '' %>";
+
+        document.getElementById("testButton").addEventListener("click", () => {
+            Swal.fire({
+                title: 'Alerta Manual',
+                text: 'Presionaste el botón de prueba.',
+                icon: 'info',
+                confirmButtonColor: '#04aa6d',
+                // color: "#0415aa",
+                // iconColor: "#ff3c00" 
+                color: "#000000",
+                confirmButtonColor: '#04aa6d',
+                iconColor: '#04aa6d'
+            });
+        });
+    </script>
+</body>
+
+</html>
