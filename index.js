@@ -1,16 +1,21 @@
 import express from "express";
 import ms from "ms";
 import nodemailer from "nodemailer";
-import bodyParser from "body-parser";
-import "dotenv/config";
+import bodyParser from "body-parser";   
+import { createRequire } from "node:module";
+
+const require = createRequire(import.meta.url);
+
+try {
+ const local = require("./config.local.cjs");
+ process.env.USER_GMAIL ||= local.USER_GMAIL;
+ process.env.APP_PASSWORD ||= local.APP_PASSWORD;
+} catch {}
+
 
 const port = 3000;
 const app = express();
 
-let local = {};
-try { local = await import("./config.local.js"); } catch {}
-process.env.USER_GMAIL ||= local.USER_GMAIL;
-process.env.APP_PASSWORD ||= local.APP_PASSWORD;
 
 console.error('ENV keys sample', Object.keys(process.env).filter(k => k.includes('GMAIL') || k.includes('APP')));
 const version = Date.now();
