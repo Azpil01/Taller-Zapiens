@@ -36,6 +36,10 @@ app.get("/", (req, res) => {
   res.render("index.ejs", { alerta: null });
 });
 
+app.get("/nosotros", (req, res) => {
+  res.render("nosotros.ejs")
+})
+
 app.post("/sendMessage", async (req, res) => {
  const { nombre, mensaje, correo } = req.body;
 
