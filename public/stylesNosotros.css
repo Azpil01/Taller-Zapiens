@@ -1,3 +1,159 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: coral;
+}
+
+h2 {
+  font-family: Merriweather, Courier, monospace;
+  font-size: 5rem;
+  margin-bottom: 5rem;
+}
+
+h3 {
+  font-family: Roboto, "Courier New";
+}
+
+h4 {
+  font-family: Roboto, "Courier New";
+  font-size: 3rem;
+}
+
+p {
+  font-family: Montserrat;
+  margin-top: 10px;
+  font-size: 1.7rem;
+  line-height: 1.5;
+  padding: 5px;
+}
+
+img {
+}
+
+.la-historia {
+  margin-top: 5%;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 7%;
+  overflow: hidden;
+}
+
+.la-historia-imagen-seccion {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.la-historia-imagen {
+  width: 90%;
+  object-fit: fill;
+  height: 150%;
+  border-radius: 40px;
+}
+
+.la-historia-contenido {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  padding: 5%;
+}
+
+.la-historia-main {
+  width: 100%;
+}
+
+
+.mision-vision-valores {
+  margin-top: 5%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
   background-color: aqua;
+}
+
+.mvv-seccion {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.mvv-seccion-header {
+  width: 100%;
+  height: 10rem;
+  background-color: aqua;
+}
+
+.mvv-seccion-main {
+  width: 100%;
+  height: 20rem;
+  background-color: powderblue;
+  text-align: center;
+}
+
+
+
+
+.nuestro-equipo {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.equipo-contenedor-principal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.equipo-contenedor {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aquamarine;
+  padding: 2rem;
+  border-radius: 4rem;
+}
+b
+.miembro-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4rem;
+}
+
+.miembro-redes-sociales ul {
+  list-style: none;
+  display: flex;
+}
+
+.miembro-redes-sociales li {
+  text-decoration: none;
+  margin: 1rem;
 }

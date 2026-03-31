@@ -14,7 +14,7 @@ try {
 
 
 const port = 3000;
-const app = express();
+const app = express();    
 
 
 console.error('ENV keys sample', Object.keys(process.env).filter(k => k.includes('GMAIL') || k.includes('APP')));
@@ -34,7 +34,7 @@ app.use(
 
 app.get("/", (req, res) => {
   res.render("index.ejs", { alerta: null });
-});
+}); 
 
 app.get("/nosotros", (req, res) => {
   res.render("nosotros.ejs")
@@ -54,7 +54,7 @@ app.post("/sendMessage", async (req, res) => {
  console.error("sendMessage error:", error?.message, error);
  return res.status(500).render("index.ejs", { alerta: "error" });
  }
-});
+}); 
 
 app.get("/prueba", (req, res) => {
   res.render("test.ejs", { enviado: true });
@@ -83,3 +83,4 @@ function sendEmailModule(nombre, mensaje, correo) {
 
   return transporter.sendMail(mailOptions);
 }
+  
