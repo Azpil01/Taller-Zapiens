@@ -293,3 +293,77 @@ figure {
   align-content: center;
   justify-content: center;
 }
+
+
+/* 1. Tablets y Pantallas Medianas (Laptops pequeñas) */
+@media (max-width: 1024px) {
+  h2 { font-size: 3rem; } /* Reducimos un poco el tamaño de los títulos principales */
+  
+  .equipo-contenedor, 
+  .equipo-contenedor-central {
+    width: 45%; /* Pasamos de 3 columnas a 2 para que no se apriete el texto */
+  }
+
+  .la-historia {
+    height: auto; /* Dejamos que el contenido dicte la altura */
+    padding: 2rem 0;
+  }
+}
+
+/* 2. Móviles (Celulares) */
+@media (max-width: 768px) {
+  body { width: 95%; } /* Aprovechamos más espacio en las orillas */
+
+  h2 { font-size: 2.5rem; }
+  h4 { font-size: 1.5rem; }
+  p { font-size: 1.1rem; }
+
+  /* La Historia: Pasamos la imagen arriba y el texto abajo */
+  .la-historia {
+    flex-direction: column; /* Apilamos verticalmente[cite: 8] */
+    height: auto;
+    width: 100%;
+  }
+
+  .la-historia-imagen-seccion, 
+  .la-historia-contenido {
+    width: 100%; /* Ocupan todo el ancho disponible[cite: 8] */
+    padding: 20px;
+  }
+
+  .la-historia-imagen {
+    width: 100%;
+    border-radius: 20px 20px 0 0; /* Ajustamos las esquinas para la nueva posición[cite: 8] */
+  }
+
+  /* Misión, Visión y Valores: De fila a columna */
+  .mision-vision-valores {
+    flex-direction: column; 
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .mvv-seccion {
+    width: 100%; /* Cada sección ocupa su propio renglón[cite: 8] */
+  }
+
+  .mvv-seccion-main {
+    height: auto; /* Evitamos alturas fijas que corten el texto[cite: 8] */
+    padding-bottom: 2rem;
+  }
+
+  /* El Equipo: Una sola columna para que las fotos luzcan */
+  .equipo-contenedor, 
+  .equipo-contenedor-central {
+    width: 90%; /* Tarjetas casi a pantalla completa[cite: 8] */
+  }
+
+  .miembro-img {
+    height: 300px; /* Reducimos un poco la altura de la foto en móvil[cite: 8] */
+  }
+
+  .miembro-bio {
+    height: auto; /* Muy importante para que no se encime el texto corto o largo[cite: 8] */
+    min-height: 120px;
+  }
+}
