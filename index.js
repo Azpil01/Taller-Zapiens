@@ -51,7 +51,7 @@ app.post("/sendMessage", async (req, res) => {
  await sendEmailModule(nombre, mensaje, correo);
  return res.render("index.ejs", { alerta: "success", usuario: nombre });
  } catch (error) {
- console.error("sendMessage error:", error?.message, error);
+ console.error("sendMessage error:", error?.message, error) ;
  return res.status(500).render("index.ejs", { alerta: "error" });
  }
 }); 

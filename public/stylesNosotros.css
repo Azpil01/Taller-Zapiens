@@ -12,13 +12,13 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-color: coral;
+
 }
 
 h2 {
   font-family: Merriweather, Courier, monospace;
-  font-size: 5rem;
-  margin-bottom: 5rem;
+  font-size: 4rem;
+  margin-bottom: 5%;
 }
 
 h3 {
@@ -27,28 +27,34 @@ h3 {
 
 h4 {
   font-family: Roboto, "Courier New";
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 p {
   font-family: Montserrat;
   margin-top: 10px;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   line-height: 1.5;
-  padding: 5px;
 }
 
-img {
+figure {
+  display: flex;
+  height: 100%;
+  justify-content: flex-start;
 }
 
 .la-historia {
   margin-top: 5%;
-  width: 90%;
-  height: 100%;
+  width: 95%;
+  height: 70vh;
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 7%;
   overflow: hidden;
+   background-color: #06372B;
+  border-radius: 20px;
+ 
 }
 
 .la-historia-imagen-seccion {
@@ -56,24 +62,31 @@ img {
   width: 100%;
   height: 100%;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+ 
 }
 
 .la-historia-imagen {
   width: 90%;
   object-fit: fill;
-  height: 150%;
-  border-radius: 40px;
+  height: 100%;
+  border-top-right-radius: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 0;
 }
 
 .la-historia-contenido {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: justify;
-  padding: 5%;
+  padding-right: 80px;
+  padding-top: 40px;
+
+  color: #ffffff;
 }
 
 .la-historia-main {
@@ -81,12 +94,19 @@ img {
 }
 
 
+.mvv-seccion-header h2 {
+  font-size: 2.5rem;
+}
+
 .mision-vision-valores {
   margin-top: 5%;
   width: 80%;
   display: flex;
   flex-direction: row;
-  background-color: aqua;
+  justify-content: center;
+ 
+  gap: 5%;
+  margin-bottom: 7%;
 }
 
 .mvv-seccion {
@@ -99,15 +119,14 @@ img {
 
 
 .mvv-seccion-header {
-  width: 100%;
-  height: 10rem;
-  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  width: 100%; 
 }
 
 .mvv-seccion-main {
   width: 100%;
   height: 20rem;
-  background-color: powderblue;
   text-align: center;
 }
 
@@ -115,10 +134,13 @@ img {
 
 
 .nuestro-equipo {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-
+  margin-bottom: 10rem;
+  background-color: #e9e9e9;
+  padding: 5%;
+  border-radius: 20px;
 }
 
 .equipo-contenedor-principal {
@@ -134,18 +156,124 @@ img {
   width: 25%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: aquamarine;
+  align-items: stretch;
   padding: 2rem;
-  border-radius: 4rem;
+  border-radius: 20px;
+  
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  
+  /* Esta sombra suave da la primera sensación de profundidad */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  
+  /* Preparamos la animación */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid transparent; 
+  
+
 }
-b
+
+.equipo-contenedor:hover {
+  /* Eleva la tarjeta hacia arriba */
+  transform: translateY(-15px); 
+  
+  /* La sombra se vuelve más oscura y amplia para simular que está más lejos del fondo */
+  box-shadow: 0 20px 40px rgba(4, 170, 109, 0.15); 
+  
+  /* Opcional: Un borde sutil con tu verde de Zapiens */
+  border: 1px solid #04aa6d; 
+}
+
+.equipo-contenedor-central {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 2rem;
+  border-radius: 20px;   
+  background-color:#04aa6d;
+  color: #ffffff;
+
+
+  /* Esta sombra suave da la primera sensación de profundidad */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  
+  /* Preparamos la animación */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid transparent; 
+  
+}
+
+.equipo-contenedor-central span{
+  color: #000000;
+  
+}
+
+.equipo-contenedor-central:hover span{
+  color: #04aa6d;
+  
+}
+
+.equipo-contenedor-central:hover {
+  /* Eleva la tarjeta hacia arriba */
+  transform: translateY(-15px); 
+  
+  /* La sombra se vuelve más oscura y amplia para simular que está más lejos del fondo */
+  box-shadow: 0 20px 40px rgba(4, 170, 109, 0.15); 
+  
+  /* Opcional: Un borde sutil con tu verde de Zapiens */
+  border: 1px solid #04aa6d; 
+  background-color: #ffffff;
+  color:#000000 ;
+}
+
+
+.miembro-img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.equipo-contenedor:hover .miembro-img {
+  transform: scale(1.02);
+}
+
 .miembro-info {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+  
+}
+
+.miembro-cargo{
+  height: 20px;
+  margin-bottom: 10px;
+  font-family: Montserrat;
+  color: #04aa6d;
+}
+
+.miembro-nombre {
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+
+.miembro-bio {
+  flex-grow: 1;
+  height: 160px;
+  margin-bottom: 20px;
+}
+
+.miembro-redes-sociales {
+  margin-top: auto;
+  display: flex;
   justify-content: center;
-  align-items: center;
-  border-radius: 4rem;
 }
 
 .miembro-redes-sociales ul {
@@ -156,4 +284,12 @@ b
 .miembro-redes-sociales li {
   text-decoration: none;
   margin: 1rem;
+}
+
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
