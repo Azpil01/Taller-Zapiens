@@ -638,6 +638,15 @@ body {
     margin-bottom: .5rem;
 }
 
+/* bottom section  */
+
+.contacto-bottom-bullets p, a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
 /* elementos */
 
 img.comunicacion {
