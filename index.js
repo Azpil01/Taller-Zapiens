@@ -40,6 +40,10 @@ app.get("/nosotros", (req, res) => {
   res.render("nosotros.ejs")
 })
 
+app.get("/faq", (req, res) => {
+
+})
+
 app.post("/sendMessage", async (req, res) => {
  const { nombre, mensaje, correo } = req.body;
 
